@@ -10,7 +10,8 @@
 				padding: 0;
 			}
 			body{
-				background-color: #fff;
+				background: url(images/img2.gif) no-repeat fixed center;
+				background-size: 100% 100%;
 			}
 			
 			.heart3d{
@@ -106,6 +107,8 @@
 			</div>
 		</div>
 		
+		<div class="bgmvideo"></div>
+		
 		<script src="jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			var heart3d = document.getElementsByClassName('heart3d')[0];
@@ -114,7 +117,7 @@
 				oDiv.className='heart';
 				oDiv.style.transform = "rotateY("+i*10+"deg) rotateZ(45deg) translate(60px)" ;
 				heart3d.appendChild(oDiv);
-				
+			}
 				
 			var flag = true;
 			function run(){
@@ -126,7 +129,12 @@
 					flag = true;
 				}
 			}
-			}
+			
+			
+			$(document).ready(function(){
+				$('.bgmvideo').append('<audio src="亲爱的你.mp3" autoplay hidden controls></audio>')
+			})
+			
 		</script>
 	</body>
 </html>
